@@ -12,8 +12,8 @@ if api_key:
 def get_gemini_response(context_text: str, user_question: str) -> str:
     """Sends the document text + user question to Gemini AI"""
     try:
-        # Gemini 1.5 Flash is good for quick general reading tasks
-        model = genai.GenerativeModel('gemini-1.5-flash')
+        # Gemini 2.5 Flash is the latest supported version for your api key
+        model = genai.GenerativeModel('gemini-2.5-flash')
         
         # Ek Accha prompt define karna zaroori hai model instructions ke liye. 
         prompt = f"""
